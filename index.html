@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>e-Commerce - Landing Page</title>
+</head>
+<body>
+
+    <header class="container">
+
+        <h1 id="logo">e-Commerce</h1>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">loja</a></li>
+            <li><a href="#">sobre</a></li>
+            <li><a href="#">contato</a></li>
+        </ul>
+
+    </header>
+
+    <main>
+
+        <div id="hero" class="container">
+            
+            <div class="heroContent">
+                <img src="img/blackFriday.svg" alt="black-friday-art">
+            </div>
+
+            <div class="heroContent">
+                <form>
+
+                    <h1>FIQUE POR DENTRO DE TODAS AS PROMOÇÕES!</h1>
+
+                    <fieldset>
+
+                        <div class="campo">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                    </fieldset>
+    
+                    <button type="button" id="formBtn" onclick="enviarForm()">Quero receber promoções!</button>
+    
+                </form>
+            </div>
+            
+        </div> <!--fechamento hero-->
+
+        <div id="faixa1">
+            <h1>AS MELHORES PROMOÇÕES ESTÃO AQUI!</h1>
+        </div>
+
+        <section id="cards" class="container">
+
+            <div class="card">
+                <img src="img/monitor.png" alt="monitor">
+                <h2>Monitor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                <button>COMPRAR</button>
+            </div>
+
+            <div class="card">
+                <img src="img/pc.png" alt="monitor">
+                <h2>Computador</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                <button>COMPRAR</button>
+            </div>
+
+            <div class="card">
+                <img src="img/teclado.png" alt="monitor">
+                <h2>Teclado</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</p>
+                <button>COMPRAR</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="linhaFooter"></div>
+    <footer>
+
+        <h1 id="logo">e-Commerce</h1>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">loja</a></li>
+            <li><a href="#">sobre</a></li>
+            <li><a href="#">contato</a></li>
+        </ul>
+
+    </footer>
+
+    <div class="atrib">Design e Coding - Vitor Lacerda</div>
+
+    <script>
+        function enviarForm() {
+            const nomeVal = document.querySelector('#nome') //Pega o que input de Nome
+            const nome = String(nomeVal.value) //Transforma o input em string
+
+            const emailVal = document.querySelector('#email') //Pega o que input de Email
+            const email = String(emailVal.value) //Transforma o input em string
+
+            const formInfos = `Nome: ${nome} - Email: ${email}` //Template string pegando as infos do form
+
+            localStorage.setItem('formInfos', formInfos) // Armazena os infos do form no LocalStorage
+        }
+    </script>
+</body>
+</html>
