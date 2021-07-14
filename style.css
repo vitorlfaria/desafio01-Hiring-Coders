@@ -206,6 +206,12 @@ footer {
     font-weight: 200;
 }
 
+.atrib a {
+    font-weight: 700;
+    color: tomato;
+    text-decoration: none;
+}
+
 
 /* Responsive Breakpoint */
 
