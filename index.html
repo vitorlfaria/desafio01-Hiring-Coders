@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>e-Commerce - Landing Page</title>
 </head>
 <body>
@@ -101,18 +101,6 @@
 
     <div class="atrib">Design e Coding  -  <a href="https://github.com/vitorlfaria" target="_blank">Vitor Lacerda</a></div>
 
-    <script>
-        function enviarForm() {
-            const nomeVal = document.querySelector('#nome') //Pega o que input de Nome
-            const nome = String(nomeVal.value) //Transforma o input em string
-
-            const emailVal = document.querySelector('#email') //Pega o que input de Email
-            const email = String(emailVal.value) //Transforma o input em string
-
-            const formInfos = `Nome: ${nome} - Email: ${email}` //Template string pegando as infos do form
-
-            localStorage.setItem('formInfos', formInfos) // Armazena os infos do form no LocalStorage
-        }
-    </script>
+    <script src="script/scripts.js"></script>
 </body>
 </html>
