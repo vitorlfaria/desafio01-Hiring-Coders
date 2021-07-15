@@ -12,3 +12,5 @@
 -Cadastre seu e-mail para receber promoções 
 
 -Dados no localstorage
+
+Link do Site no ar: [e-Commerce Landing Page](https://hiring-coders-landing-page.netlify.app/)
